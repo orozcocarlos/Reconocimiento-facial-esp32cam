@@ -25,6 +25,24 @@ while True:
         rostro = cv2.resize(rostro,(150,150),interpolation= cv2.INTER_CUBIC)
         result = face_recognizer.predict(rostro)
         cv2.putText(img,'{}'.format(result),(x,y-5),1,1.3,(255,255,0),1,cv2.LINE_AA)
+        '''
+		# EigenFaces
+		if result[1] < 5700:
+			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
+			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
+		else:
+			cv2.putText(frame,'Desconocido',(x,y-20),2,0.8,(0,0,255),1,cv2.LINE_AA)
+			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,0,255),2)
+		
+		# FisherFace
+		if result[1] < 500:
+			cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
+			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
+		else:
+			cv2.putText(frame,'Desconocido',(x,y-20),2,0.8,(0,0,255),1,cv2.LINE_AA)
+			cv2.rectangle(frame, (x,y),(x+w,y+h),(0,0,255),2)
+		'''
+		# LBPHFace
         if result[1] < 70:
             cv2.putText(img,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
             cv2.rectangle(img, (x,y),(x+w,y+h),(0,255,0),2)
