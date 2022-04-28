@@ -7,7 +7,7 @@ dataPath = 'D:/VCS/gitclonaciones/esp32face/data' #Cambia a la ruta donde hayas 
 personPath = dataPath + '/' + personName
 
 f_cas= cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
-url='http://192.168.1.141/cam-hi.jpg'
+url='http://192.168.1.141/cam-hi.jpg' #ip asignada al arduino
 ##'''cam.bmp / cam-lo.jpg /cam-hi.jpg / cam.mjpeg '''
 cv2.namedWindow("Live Transmission", cv2.WINDOW_AUTOSIZE)
 count = 0
