@@ -5,5 +5,8 @@
 3. Reconocimiento en tiempo Real (Reconocimiento facial.py)
 
 ![](ESP32CAM.jpg)
+
+
+
 ![](20220506_171146.gif)
 
